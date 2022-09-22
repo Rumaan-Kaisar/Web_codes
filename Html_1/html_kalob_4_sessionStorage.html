@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>BoilerPlate</title>
+        <link>
+        <script type="text/javascript">
+            function counter(){ 
+                if(typeof(Storage)!=="undefined") { 
+                    if(sessionStorage.counter) {
+                        sessionStorage.counter = Number(sessionStorage.counter)+1;
+                    } else {
+                        sessionStorage.counter = 1;
+                        }
+
+                    document.getElementById("number").innerHTML= sessionStorage.counter;
+
+                    if (sessionStorage.counter>1) {
+                        document.getElementById("number").innerHTML+="<p>Refreah the page</p>";
+                    } else {
+                        document.getElementById("number").innerHTML+="<p>Sorry, your browser does not support web atorage...</p>";
+                    }
+                }
+            }
+
+        </script>
+    </head>
+    
+    <body>
+        <p>Hello</p>
+        <button onclick="counter()" type="button">Add another one!</button>
+        <div id="number"></div>
+
+        <script>
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    
+    <body>
+        
+        <form action="#" method="get">
+            <label for="U_name">Username
+                <input type="text" placeholder="username" name="U_name" id="U_name" required>
+            </label>
+            <label for="pw">Password
+                <input type="password" placeholder="password" name="pw" id="pw" required>
+            </label>
+            <label for="email">Email
+                <input type="email" placeholder="email" name="email" id="email" required> 
+            </label>
+            <input type="submit" id="post">
+            
+            <label> Dogs
+                <input type="radio" id="dogs" name="petchoice">
+            </label>
+            <label> Cats
+                <input type="radio" id="cats" name="petchoice">
+            </label>
+            
+            
+            <select name="color"> 
+                <option>Red</option> 
+                <option>Orange</option> 
+                <option>Yellow</option> 
+            </select>
+            
+            <select name="mood"> 
+                <option value="Happy">:)</option> 
+                <option value="Natural">:/</option> 
+                <option value="Sad">:(</option> 
+            </select>
+            
+            <textarea name="paragraph" rows="10" cols="10"></textarea>
+            
+            <label for="story">Tell us your story:</label>
+            <textarea id="story" name="story" rows="5" cols="33">
+                It was a dark and stormy night...
+            </textarea>
+            
+        </form>
+        
+    </body>
+    
+    <style>
+        label{
+            display: block;
+            margin-left: 10px;
+            padding: 7px;}
+        
+        #post{
+            display: block;
+            margin-left: 15px;
+            }
+    </style>
+</html>
+

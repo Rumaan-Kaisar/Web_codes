@@ -1,0 +1,83 @@
+<!--this is a comment-->
+
+<!DOCTYPE html>
+<!--this is a comment-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> Video</title>
+        <link>
+        <script type="text/javascript">
+            function allowDrop(e){
+                e.preventDefault() ;
+                // prevents the image from moving back to its natural area
+            }
+
+            function drag(e) {
+                e.dataTransfer.setData("Text", e.target.id);
+                // allows the item to be dragged
+            }
+
+            function drop(e) { 
+                e.preventDefault();
+                d = e.dataTransfer.getData("Text"); // d = data 
+                e.target.appendChild(document.getElementById(d));
+                // this code allows you to drop the item
+            }
+        </script>
+    </head>
+    
+    <!--this is a comment-->
+    
+    <body>
+        <img draggable="true" id="DragMe" src="./img/po_1_Capture.JPG" ondragstart="drag(event)" height="300" width="300">
+        <!-- drop Zone area -->
+        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="dropzone" style="border: 1px; height: 350px; width: 350px;"></div>
+
+        
+        <button onclick="PlayorPause()">Play or Pause</button> 
+        <button onclick="bigScreen()">Big screen baby!</button> 
+        <button onclick="normalScreen()">just regular size for me</button> 
+        <br>
+
+        <video id="lecture" width="300" controls="controls">
+            <source src="./video/video.mp4" type="video/mp4">
+            Your browser is either old if doesn't support MP4 or OSG formats 
+        </video>
+
+
+
+
+
+        <!--this is a comment-->
+<!--
+        <video autoplay="autoplay" controls="controls" loop="loop">
+            <source src="qncd.mp4" type="video/mp4">
+            <source src="https://qncd.ogg" type="video/ogg">
+            <source src="qncd.mp4" type="video/mp4">
+        </video>
+-->
+        <p>This word is <em>emphesized</em></p>
+        
+        <script>
+            var lecture = document.getElementById("lecture");
+
+            function PlayorPause(){
+                if (lecture.paused){
+                    lecture.play(); 
+                } else {
+                    lecture.pause(); 
+                }
+            }
+
+            function normalScreen(){
+                lecture.width = 300;
+            }
+
+            function bigScreen(){
+                lecture.width = 500;
+            }
+        </script>
+    </body>
+
+</html>
