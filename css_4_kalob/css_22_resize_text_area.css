@@ -1,0 +1,14 @@
+.horizontal{
+    resize: horizontal;
+    overflow: auto;
+}
+
+.vertical {
+    resize: vertical;
+    overflow: auto;
+}	
+
+.both {
+    resize: both;
+    overflow: auto;
+}

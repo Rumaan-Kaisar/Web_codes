@@ -1,0 +1,12 @@
+div{
+    float: left;
+}
+
+/* clear will remove floating */
+div h1{
+    clear: both;
+}
+
+.div2{
+    float: right;
+}

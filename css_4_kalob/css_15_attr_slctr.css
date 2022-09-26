@@ -1,0 +1,15 @@
+[lang=abc]{
+    border: 1px solid black;
+}
+
+/* Targetting elements */
+option[name = dark]{
+    color: white;
+    background: bisque;
+}
+
+input[type = text]{
+    /* style */
+}
+
+

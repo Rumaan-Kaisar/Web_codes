@@ -1,0 +1,16 @@
+
+@media screen {
+    /* all computer screen stuff goes in here */
+}
+
+@media handheld{
+    /* mobile devices like iPod touch and cell phone styling would go In here */
+}
+
+@media print{
+    /* page styling for a printable page. They are usually pretty bland pages to save the user some ink */
+}
+
+@media tv{
+    /* this styling is for television-type devices */
+}

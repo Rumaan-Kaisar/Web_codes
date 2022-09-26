@@ -1,0 +1,12 @@
+div{
+    list-style-type: circle;
+    display: inline;
+}
+
+/* custom list imaging */
+li{
+    background-image: url(./mz.PNG);
+    background-repeat: no-repeat;
+    list-style-type: none;
+    padding-left: 15%;
+}

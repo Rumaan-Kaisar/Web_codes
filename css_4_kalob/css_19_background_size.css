@@ -1,0 +1,59 @@
+.small {
+    background-image: url('star.png');
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    border :1px solid red;
+    width:50px;
+    height: 50px;
+}
+
+.big{
+    background-image: url('star.png');
+    background-size: 200% 200% ;
+    background-repeat: no-repeat;
+    border :1px solid red;
+    width: 50px;
+    height: 50px;
+}
+    
+.contain1{
+    background-image: url('star.png');
+    background-size: contain ;
+    background-repeat: no-repeat;
+    border :1px solid red;
+    width: 50px;
+    height: 50px;
+}
+
+.contain2{
+    background-image: url('star.png');
+    background-size: contain ;
+    background-repeat: no-repeat;
+    border :1px solid red;
+    width: 25px;
+    height: 50px;
+}
+
+
+.cover1{
+    background-image: url('star.png');
+    background-size: cover ;
+    background-repeat: no-repeat;
+    border :1px solid red;
+    width: 50px;
+    height: 50px;
+}
+
+.cover2{
+    background-image: url('star.png');
+    background-size: cover ;
+    background-repeat: no-repeat;
+    border :1px solid red;
+    width: 25px ;
+    height: 50px;
+}
+    
+    
+
+        
+

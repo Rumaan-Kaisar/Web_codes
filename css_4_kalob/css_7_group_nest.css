@@ -1,0 +1,18 @@
+
+/* Grouping using "," */
+
+div, #MyId, .blue, h1{
+    color: aqua;
+    overflow: auto;
+}
+
+/* Nesting using " " */
+div ol li{
+    list-style: none;
+    color: red;
+}
+
+.green #uniqId div{
+    background-color: bisque;
+    font-family: sans-serif;
+}

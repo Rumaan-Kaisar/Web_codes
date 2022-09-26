@@ -1,0 +1,13 @@
+.topRight     { border-top-right-radius: 10px; }
+.bottomtRight { border-bottom-right-radius: 10px; }
+.bottomLeft	 { border-bottom-left-radius: 10px; }
+.topLeft	 { border-top-left-radius: 10px; }
+/* IS THE SAME AS */
+.radius{ border-radius: 10px; }
+
+.shortHand {
+    border:1px solid red; 
+    border-radius: 10px 0px 20px 10px;
+    /* READS LIKE THIS border-radius: top-left top-right bottom-right bottom-left; */
+    }
+    

@@ -1,0 +1,13 @@
+.url { border-image : url(BorderImage.gif), . . . }
+
+/* slicing the image */
+.url { border-image : url(BorderImage.gif),  . . . }
+
+.border {
+    border-width: 20px;
+    -moz-border-image : url(‘BorderImage.png’) 20 20 20 20 repeat; 
+    -webKit-border-image: url(‘BorderImage.png’) 20 20 20 20 repeat; 
+    -o-border-imaqe: url(‘BorderImage.png’) 20 20 20 20 repeat; 
+    border-image: url(‘BorderImage.png’) 20 20 20 20 repeat;
+    }
+    

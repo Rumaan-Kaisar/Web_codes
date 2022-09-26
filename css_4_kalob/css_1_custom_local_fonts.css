@@ -1,0 +1,43 @@
+body{
+    background-image: url(./mz.PNG);
+    background-repeat: repeat-x;
+    background-attachment: scroll;
+    background-position: 10px;
+}
+
+.test{
+    background-color: blue;
+    color: white;
+    border: 1px solid red;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+/* using local font */
+@font-face{
+	font-family: myFirstFont;
+	src: url(abd.otf);
+}
+
+div{
+	font-family: myFirstFont;
+}
+
+@font-face {
+    font-family: myCustomFamilyName;	/*This is where you name your font */
+    src: url('myFont.ttf'), url('myFont.otf'), url('myFont.eot');
+}
+
+@font-face {
+    font-family: myName;
+    src: url('octin_spraypaint.ttf') ;
+}
+
+.font {
+    font-family: myName;
+}
+    
+
+    

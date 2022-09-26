@@ -1,0 +1,16 @@
+div{
+    margin: 0 auto 0 auto;
+    /* or;
+    margin: 0 auto; */
+}
+
+.div{
+    text-align: center;
+}
+
+.vertical{
+    vertical-align: middle;
+    /* sub = <sub>
+    sup = <sup>
+    default = baseline */
+}

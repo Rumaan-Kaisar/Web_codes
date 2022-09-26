@@ -1,0 +1,13 @@
+.sprite{
+    background-image: url("sprite.png");
+    background-position: -17px -373px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 15px;
+}
+
+
+.div2{
+    opacity: 50%;
+}
+
