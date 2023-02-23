@@ -1,0 +1,30 @@
+
+	Fundamentals
+
+	1.	Colt vweb 2.0
+	2.	Colt adv web
+	3.	Angela web
+	4.	Issum web
+	5.	Anagoe web
+
+
+
+
+	Advanced
+
+	1.	Colt JS
+	2.	Jonas JS
+	3.	Colt JSDSA
+	4.	Colt MySQL
+
+
+
+
+	Frontend Design
+
+	1.	Colt React
+	2.	ZTM React
+	3.	Bootstrap4 5 prj
+
+
+
