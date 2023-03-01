@@ -1,0 +1,6 @@
+CSS overview
+Basic CSS syntax
+Including Style in HTML
+Color Syntax: RGB or HEX
+Common Text Properties
+Font family property
