@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+
+<body>
+<!--
+
+            2.14 HTML Forms
+            i.	Explain the role of the form element 
+            ii.	Utilize a variety of form controls 
+            iii.	Define complex HTML forms 
+            iv.	Add HTML5 Form Validations 
+            v.	Ensure accessibility of our forms
+
+            	It is used for signup/log-in/product/ or to create a search bar.
+            	It is used with post/get method attributes. It contains the address where the data needs to send using action attribute.
+
+            	CREATING FORMS
+            	The <form> element itself is a shell or container that doesn't have any visual impact.
+            	We then fill the form with a collection of inputs, checkboxes, buttons, etc.
+
+
+            	<form>:   The form element "represents a document section containing interactive controls for submitting information."
+            	action:   The action attribute specifies WHERE the form data should be sent.
+                    The URL that processes the form submission. 
+                    This value can be overridden by a form. 
+                    action attribute applied on a <button>, <input type="submit">, or <input type="image"> element.
+
+            	method:   The method attribute specifies which HTTP method should be used (don't worry about this for now)
+
+                    post: The POST method; form data sent as the request body. Example: submitting personal info to facebook sign-up form. It takes the input data and send it to the database.
+
+                    get: The GET method; form data appended to the action URL with a ? separator. Use this method when the form has no side-effects. Example: Searching in Wikipedia or Google.
+
+                    dialog: When the form is inside a <dialog>, closes the dialog on submission.
+
+
+            <form action="/my-form-submitting-page" method="post">
+                            all inputs are here
+            </form>
+
+
+            	From Elements
+            	common input types:  < input type=""> element is used to create a variety of different form controls. We have 20+ possible types of inputs.
+            	The type attribute is where the magic happens. Changing type dramatically alters the input’s behavior and appearance.
+
+            	As default (with no type specified) it is a text input.
+            	Placeholder to indicate what type of input this is.
+            	In label "for" & "id" attributes are use to coonect input and label.
+
+
+
+	Effect of <form> tag: if we didn't use the <form> tag, it just looks like a form to us. But it do nothing.
+    	<form> just a container where we put our inputs.
+
+
+        <form action="#" method="get">
+            <input type="text" placeholder="username">
+            <input type="password" placeholder="password"> 
+            <button>Submit</button>
+            <input type="submit">
+        </form>
+
+    	the <input> elements themselves are 'inline elements' but the <form> itself a 'block-level' element.
+    	if I fill out my username and password and I hit submit, you'll see my page actually refreshes and my data disappears.
+
+
+
+	Use get method when the form has no side-effects: 
+
+-->
+
+    
+    
+<!--	Names: used to store set data to database
+
+When we actually submit this form the data is sent along with this request and there's a way for us to see that. If we give a name to each piece of data (inputs) that we want to be sent. So it's a <name> attribute.
+query string: Basically it's a question mark followed by key value pairs separated by ampersands.       form.html?U_name=vf&pw=vfb#
+We use a post request usually rather than a get request. 
+-->
+
+            <input type="text" placeholder="username" name="U_name">
+            <input type="password" placeholder="password" name="pw"> 
+
+    
+
+
+<!--	Labels: 
+
+The HTML <label> element represents a caption for an item in a user interface. 
+    If someone is visually blind and they're accessing our form trying to sign up, their screen reader software that they're using is going to look for label tags and it's going to use those labels to know what each part of the form corresponds to.
+    
+	So there's two syntaxes to Create a label tag: -->
+
+    <!--
+    [1]	We actually put the input inside that label tag. You can nest the <input> directly inside the <label>, in which case the for and id attributes are not needed because the association is implicit. Good practice is use the nested form.-->
+
+            <label>Do you like peas?
+              <input type="checkbox" name="peas">
+            </label>
+            
+    <!--
+    [2]	There is an alternate syntax rather than having inputs nested inside of label. We actually can completely separate them and we connect them in a slightly different way. To associate the <label> with an <input> element, you need to give the <input> an id attribute. The <label> then needs a for an attribute whose value is the same as the input's id.-->
+
+                <label for="peas">Do you like peas?</label>
+                <input type="checkbox" name="peas" id="peas">
+    
+<!--	Although, they are separated but they need to stay alongside (i.e. nothing can stay in-between). Like following cause problem:-->
+            <input type="text" placeholder="username" name="U_name" id="U_name" required>
+            <input type="password" placeholder="password" name="pw" id="pw" required>
+            <input type="email" placeholder="email" name="email" id="email" required> 
+            <input type="submit">
+            <label for="U_name">Username</label>
+            <label for="pw">Password</label>
+            <label for="email">Email</label>
+    
+<!--  
+	Form Validations: The Boolean required attribute which, if present, indicates that the user must specify a value for the input before the owning form can be submitted. The required attribute is supported by text, search, url, tel, email, password, date, month, week, time, datetime-local, number, checkbox, radio, file, <input> types along with the <select> and <textarea> form control elements. If present on any of these input types and elements, the :required pseudo class will match. If the attribute is not included, the :optional pseudo class will match.
+	So we can say that you cannot leave your email blank or your password must be greater than 10 characters or your email must follow a valid email syntax.
+
+	Simple Validations:
+	The 'required' attribute validates that an input is not empty
+	There are also type validations. Try changing "type" from "text" to "email"
+	We will do validations for javascript will do validations on the backend.
+	The other type of validation that we can do is based around data type or the format of data. So the simplest one is to make sure that an email actually looks like an e-mail that it actually has the correct format where we have something at something dot com or dot some domain. So to do that, type equals email and just by changing type it be email and placeholder.
+
+-->
+
+Sending data:
+    POST & GET
+    label data: nested or using id
+
+	Buttons to submit the form:
+	Any button inside a <form> will submit the form by default. 
+	We can make the button to not submit the form by specifying type.
+
+<button type="button">Regular button (won't submit)</button>
+
+	We can specify explicitly type to submit the form <button type="button">
+
+	This will create also a button. We can name the button using value attribute.
+
+<input type="submit" value="Click Me!">
+
+	You can submit the form by hitting "Enter" if there is no button.
+
+
+
+	"name" attributes:
+	"name" is important to send data to Database.
+
+<input id="username" type="text" placeholder="username" name="username">
+
+We cannot view the data in URL when we use a POST request.
+
+
+
+	Use search engines in your web page
+
+    <!-- Form search google/yandex practice -->
+    <form method="get" action="https://www.google.com/search?client=firefox-b-d">
+        <input type="text" name="q" placeholder="search google">
+    </form>
+    <form method="get" action="https://yandex.com/search/?">
+        <input type="text" name="text" placeholder="search yandex">
+    </form>
+
+
+
+	Other form elements:
+	Check box: 
+
+<label for="agree">I agree to everything</label>
+
+ 	Or use "checked" if you want it already checked.
+
+<label for="agree" checked>I agree to everything</label>
+
+	Radio Button: Group the radio buttons by giving the same name to them. It is good to use them in a container like <p>. Use unique "values" unless on/off will sent to the server.
+
+        <p>
+            <label for="xs">XS:</label>
+            <input type="radio" name="size" id="xs" value="xs">
+            <label for="s">S</label>
+            <input type="radio" name="size" id="s" value="s">
+            <label for="m">M</label>
+            <input type="radio" name="size" id="m" value="m">
+        </p>
+
+
+	Select/Dropdown menu: Specify values also. You can make some option "preselected" or some default 
+
+    <form>
+        <p>
+            <label for="meal">Please Select an Entree</label>
+            <select name="meal" id="meal">
+                <option value="">Selecto</option>
+                <option value="fish">Fish</option>
+                <option value="veg" >Vegetarian</option>
+                <!-- <option value="veg" selected>Vegetarian</option> -->
+                <option value="steak">Steak</option>
+            </select>
+        </p>
+    </form>
+
+
+
+	Range: Following is preselected to 75 initial value. You can use steps also eg: step ="7".
+
+        <p>
+            <label for="cheese">Amount of Cheese:</label>
+            <input type="range" id="cheese" min="1" max="100" value="75" step = "7" name="cheese_level">
+        </p>
+
+
+
+	Number input: 
+
+            <label>
+                Enter a Number:
+                <input type="number" placeholder="enter a number" name="num" min="1" max="1000">
+            </label>
+
+
+	Text area:
+
+<p>
+<label for="requests">Any Special Requests?</label>
+<br>
+<textarea id="requests" rows="10" cols="40" name="Requests?" placeholder="Type something here"></textarea>
+</p>
+
+
+
+    
+    
+    <h1>Forms Demo</h1>
+    <h2>Our First Form</h2>
+
+    <form action="/tacos">
+        <p>
+            <label for="username">Enter a Username:</label>
+            <input id="username" type="text" placeholder="username" name="username">
+        </p>
+        <p>
+            <label for="password">Enter a Password:</label>
+            <input type="password" placeholder="password" id="password" name="password">
+        </p>
+        <p>
+            <label for="color">Enter a Color:</label>
+            <input type="color" id="color" name="color">
+        </p>
+        <p>
+            <!-- Alternative way to label an input (less common) -->
+            <label>
+                Enter a Number:
+                <input type="number" placeholder="enter a number" name="num" min="1" max="1000">
+            </label>
+        </p>
+        <!-- this button doesn't submit the form b/c of the "type" attribute -->
+        <button type="button">Regular button (won't submit)</button>
+        <!-- This button submits the form! -->
+        <button>Submit!!!</button>
+        <!-- So does this one: -->
+        <input type="submit" value="Click Me!">
+    </form>
+    <hr>
+    <!-- Outside of a form, no default behavior -->
+    <button>Not Inside Form</button>
+    <h2>Hijacking Searches</h2>
+    <h3>Search Reddit</h3>
+    <form action="https://www.reddit.com/search">
+        <input type="text" name="q">
+        <button>Search Reddit</button>
+    </form>
+    <h3>Search Google</h3>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <button>Search Google</button>
+    </form>
+    <h3>Search Youtube</h3>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <button>Search Youtube</button>
+    </form>
+
+    <h2>More Inputs!</h2>
+    <form action="/birds">
+        <input type="checkbox" name="agree_tos" id="agree">
+        <label for="agree">I agree to everything</label>
+        <p>
+            <label for="xs">XS:</label>
+            <input type="radio" name="size" id="xs" value="xs">
+            <label for="s">S</label>
+            <input type="radio" name="size" id="s" value="s">
+            <label for="m">M</label>
+            <input type="radio" name="size" id="m" value="m">
+        </p>
+        <p>
+            <label for="meal">Please Select an Entree</label>
+            <select name="meal" id="meal">
+                <option value="fish">Fish</option>
+                <option value="veg">Vegetarian</option>
+                <option value="steak">Steak</option>
+            </select>
+        </p>
+        <p>
+            <label for="cheese">Amount of Cheese:</label>
+            <input type="range" id="cheese" min="1" max="100" value="75" name="cheese_level">
+        </p>
+
+        <p>
+            <label for="requests">Any Special Requests?</label>
+            <br>
+            <textarea id="requests" rows="10" cols="40" name="Requests?" placeholder="Type something here"></textarea>
+        </p>
+        <button>Submit</button>
+    </form>
+
+    <h2>Validations Demo</h2>
+    <form action="/dummy">
+        <p>
+            <label for="first">Enter First Name</label>
+            <input type="text" id="first" name="first" required>
+        </p>
+        <p>
+            <label for="user">Username</label>
+            <input type="text" id="user" name="username" minlength="5" maxlength="20" required>
+        </p>
+
+        <p>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+        </p>
+        <p>
+            <label for="website">Website</label>
+            <input type="url" id="website" name="website">
+        </p>
+
+        <button>Submit</button>
+    </form>
+
+    <!-- Form search google/yandex practice -->
+    <form method="get" action="https://www.google.com/search?client=firefox-b-d">
+        <input type="text" name="q" placeholder="search google">
+    </form>
+    <form method="get" action="https://yandex.com/search/?">
+        <input type="text" name="text" placeholder="search yandex">
+    </form>
+
+    <form>
+        <p>
+            <label for="meal">Please Select an Entree</label>
+            <select name="meal" id="meal">
+                <option value="">Selecto</option>
+                <option value="fish">Fish</option>
+                <option value="veg" >Vegetarian</option>
+                <!-- <option value="veg" selected>Vegetarian</option> -->
+                <option value="steak">Steak</option>
+            </select>
+        </p>
+    </form>
+
+
+</body>
+
+</html>
