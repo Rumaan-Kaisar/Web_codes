@@ -5,6 +5,8 @@
 
     'background' is not same as 'background-color'.
     'background' do lot more, it can set "image" or "gradients" etc.
+
+    Add always semicolon.
 */
 
 h2 {
