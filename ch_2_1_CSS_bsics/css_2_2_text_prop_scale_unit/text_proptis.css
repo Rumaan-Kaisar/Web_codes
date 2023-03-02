@@ -1,0 +1,58 @@
+/* 
+    align
+    font-weight
+    font-size (diccussed later)
+    text-deciration, italic, 
+    line height 
+    letter spacing
+    Thick line of thin line: (not covered)
+*/
+
+
+/* 
+    Scaling units: 
+        Relative    absolute
+        em          px
+        rem         pt
+        vu          in
+        vh          cm
+        %           mm
+
+        for responsiveness use "Relative-scaling"
+
+*/
+
+/* 
+    font-family: 
+    Browser default font: Most common font families in different machines
+        arial, Georgia, Verdana etc.
+    Add Google fonts.
+    Include custom font in your webs folder
+
+    Font stack: Comma seperated list
+        font-family: Segoe UI, Futura, Arial, sans-serif;
+        sans-serif is backup/falback font, any font of this family (not specific).
+        Just using a font family (not specific) will pick random fonts. Eg: 
+            font-family: fantasy;  will pick any fantasy font (family of font types).
+*/
+
+
+h1 {
+    text-align: center;
+    font-weight: 400;
+    text-decoration: #f78120 underline wavy;
+    letter-spacing: 15px;
+    font-size: 80px;
+    /* font-family: Segoe UI, Futura, Arial, sans-serif; */
+    font-family: monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 2; /* 2 times of parent size/default size */
+}
+
+
