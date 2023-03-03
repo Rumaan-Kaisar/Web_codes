@@ -1,0 +1,291 @@
+/*  
+    Basic Pattern
+    selector {
+        property: value;    
+    }
+
+    Selection:
+        element
+        combination of elements, atribute, pseudo & others
+
+    Universal or * selector
+    * {
+        background-color: cyan;
+    }
+
+*/
+
+
+
+
+/* 
+    HTML element selector
+    single element or 
+    comma separated multple selectors   h1,h2 { }
+
+        html-element {
+            - - - -
+        } 
+*/
+
+body {
+    background-color: #f1faee;
+}
+
+button {
+    font-size: 30px;
+    background-color: #a8dadc;
+}
+
+h1,h2 {
+    color: #1d3557;
+}
+
+
+
+
+/* 
+    id selector use '#',    style a specific elements
+        #id_name{
+            prop: val;
+        }
+*/
+
+#signup{
+    background-color: #1d3557;
+    color: #f1faee;
+}
+
+
+
+
+/* 
+    class selector   use '.',   style a class of elements
+    To style any element in html, just use the class_name in it.
+        .class_name{
+                    prop: val;
+                }
+*/
+
+span {
+    color: #457b9d;
+}
+
+.tag {
+    background-color: #e63946;
+    color: #f1faee;
+    font-size: 16px;
+}
+
+
+
+
+/*
+    DESCENDANT SELECTOR, select nested elements inside one/multiple element.
+    Selects all elements that falls into same pattern
+
+    Select all <a>'s that are nested inside an <li>
+        li a{
+            color: teal;
+        }
+
+ */
+
+.post a {
+    color: #457b9d;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+footer a {
+    color: #e63946;
+}
+
+
+
+
+/* 
+    Adjacent selector
+    selects that are immediately after a element 
+        Select only the paragraphs that are immediately preceded by an <h1>
+        <h1> + p {
+            color: red;
+        }
+*/
+
+h2 + button {
+    font-size: 20px;
+}
+
+input + button {
+    text-decoration: white dashed underline;
+}
+
+
+
+
+/* 
+    Direct child or direct adjacent selector 
+    Selet only the <li>'s that are direct childeren of <div>
+    div > li {color: white}
+    */
+
+footer > a {
+    color: #457b9d;
+}
+
+
+
+
+/* 
+    attribute selector
+        input[type = "text"]{}    
+        there is other : https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+*/
+
+
+input[type="password"] {
+    color: greenyellow;
+}
+
+a[href*="google"]{
+    color: #1d3557;
+}
+
+/* -------------------  Other versions of attribute selector ------------------- */
+
+/* <a> elements with a title attribute */
+a[title] {
+    color: purple;
+  }
+  
+  /* <a> elements with an href matching "https://example.org" */
+  a[href="https://example.org"]
+  {
+    color: green;
+  }
+  
+  /* <a> elements with an href containing "example" */
+  a[href*="example"] {
+    font-size: 2em;
+  }
+  
+  /* <a> elements with an href ending ".org" */
+  a[href$=".org"] {
+    font-style: italic;
+  }
+  
+  /* <a> elements whose class attribute contains the word "logo" */
+  a[class~="logo"] {
+    padding: 2px;
+  }
+
+
+
+
+/* 
+    PSEUDO CLASSES
+    Pseudo classes: Select special state of an element
+    keyword added to a selector that specifies a special state of the selected element(s)
+    •	:active
+    •	:checked
+    •	:first
+    •	:first-child
+    •	:hover
+    •	:note)
+    •	:nth-child()
+    •	:nth-of-typed
+            nth-of-type selector allows you select one or more elements based on 
+            their source order, according to a formula. 
+*/
+
+.post a:hover {
+    text-decoration: underline;
+}
+.post button:active {
+    background-color: #02c39a;
+}
+
+/* Selects every second element */
+.post:nth-of-type(2n){
+    background-color: #dfe8dc;
+}
+
+/* Selects the second element of div siblings */
+div:nth-of-type(2) {
+    background: red;
+}
+  
+/* Selects the second li element in a list */
+li:nth-of-type(2) {
+background: lightgreen;
+}
+
+/* Selects every third element among any group of siblings */
+:nth-of-type(3) {
+background: yellow;
+}
+
+
+
+
+/* 
+    PSEUDO ELEMENTS styling particular segment of an element
+    Keyword added to a selector that lets you style a particular part of selected element(s)
+    Eg: first letter or Last letter
+    •	::after
+    •	::before
+    •	::first-letter
+    •	::first-line
+    •	::selection
+*/
+
+h2::first-letter {
+    font-size: 50px;
+}
+
+p::first-line {
+    color: purple;
+}
+
+p::selection {
+    background-color: #58ecb3;
+}
+
+
+.post button:hover {
+    background-color: #e63946;
+    color: #f1faee;
+}
+
+button:hover {
+    background-color: olive;
+}
+
+button {
+    background-color: magenta !important;
+}
+
+/* 
+    Cascading: Order matter in CSS, 
+        #   Order in same CSS file: Newest element has the effect 
+        #   Order in multple CSS file: Newly added stylesheet override the earlier
+*/
+
+
+
+/* 
+    SPECIFICITY
+    Specificity is how the browser decides which rules to apply when multiple rules could apply to the same element.
+    It is a measure of how specific a given selector is. The more specific selector "wins" 
+
+    ID > Class > Element
+    Do not use "important" if you have other options
+
+    Avoid inline styling: More specific than ids and classes
+
+    !important > inline styling >   ID > Class > Element
+
+    use CHROME-inspector to inspect elements styling
+    
+*/

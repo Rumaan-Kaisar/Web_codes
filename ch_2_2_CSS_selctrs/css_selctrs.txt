@@ -1,0 +1,18 @@
+
+	--------	Crucial!	--------
+
+	Element Selector
+	Class Selector
+	ID Selector
+	Descendent Selector
+
+
+
+	--------	Important	--------
+	
+	Adjacent Selector
+	Direct Descendent Selector 
+	Attribute Selector
+	Pseudo Elements
+	Pseudo Classes
+	CSS Specifity 

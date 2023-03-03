@@ -1,0 +1,32 @@
+/* 
+        Inheritance: some CSS property values set on parent elements are inherited by their child elements, and some aren't.
+        For example, if you set a color and font-family on an element, every element inside it will also be styled with that color and font, 
+        unless you've applied different color and font values directly to them.
+
+
+        Some properties do not inherit — for example, if you set a width of 50% on an element, 
+        all of its descendants do not get a width of 50% of their parent's width. 
+        If this was the case, CSS would be very frustrating to use! 
+
+        So by default some property won't inherit from its p0arent, to force it to inherit, we use "inherit" value
+
+                property: inherit;
+
+*/
+
+
+body {
+    color: purple;
+}
+
+section {
+    color: aqua;
+}
+
+form {
+    color: greenyellow;
+}
+
+button, input {
+    color: inherit;
+}
