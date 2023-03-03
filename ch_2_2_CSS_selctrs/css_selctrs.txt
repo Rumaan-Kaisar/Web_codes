@@ -16,3 +16,5 @@
 	Pseudo Elements
 	Pseudo Classes
 	CSS Specifity 
+	
+	VS-code TIP :	If you want to get html boilerplate with Emmet Abbreviation, you should type 'html:5' and hit 'tab'.
