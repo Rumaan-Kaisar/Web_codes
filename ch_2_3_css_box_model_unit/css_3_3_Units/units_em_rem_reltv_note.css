@@ -1,0 +1,124 @@
+/* 
+
+                Relative: RESPONSIVE
+
+                    EM  EM’S ARE RELATIVE UNITS
+                        With font-size, 1em equals the font-size of the parent. 
+                        2em's is twice the font-size of the parent, etc.
+
+                        With other properties, 1em is equal to the computed font-size of the element itself.
+
+                        say article is parent of h1, then:
+                        areticle{
+                            font-size : 20px;
+                        }
+
+                        h1{
+                            font-size : 2em;
+                            padding: 2em;
+                        }
+                        in this case h1's fontsize is relative to its parent "article" = 40px
+                        but padding is relative to h1's fontsize, so in this case 2em = 80px
+
+                        Using px will destroy the sahpe,
+                        em, % preservs the shape
+                    
+                            button {
+                                font-size: 1em;
+                                padding: 0 1em;
+                                border-radius: 0.5em;
+                                background-color: #2a9d8f;
+                                color: white;
+                            }
+
+                    REM: less confusing than em's
+                        Avoid issues with em's, nested elements gets bigger proportinally
+                        Eg: nested ul's with em's
+                        
+                        REM: ROOT EM's. Relative to the root html element's font-size. 
+                        Often easier to work with.
+                        If the root font-size is 20px, 1 rem is always 20px, 2rem is always 40px, etc.
+                    
+                        By default html, root font-size is 16px.
+                        the standard root font-size of browsers is 16px. 
+                        This fixed value is in 'px' units by default. 
+                        But 'rem' units compared to 'px' are capable of creating more responsive websites.
+
+
+
+                    %   relative to other
+                        Sometimes, it's a value from the parent. 
+                            Eg: width: 50% - half the width of the parent 
+                        other times it’s a value from the element itself. 
+                            Eg: line-height: 50% - half the font-size of the element itself
+
+                    VH  not commonly used
+                    VW  not commonly used
+
+                Absolute:
+                    PX (mostly used)
+                    PT
+                    CM
+                    IN
+                    MM
+*/
+
+html {
+    font-size: 30px;
+}
+#percentages {
+    background-color: #6d6875;
+    width: 800px;
+    height: 800px;
+}
+
+#percentages div {
+    background-color:#e5989b;
+    width: 70%;
+    height: 20%;
+}
+
+
+#ems h2 {
+    font-size: 2em;
+    margin-left: 1em;
+}
+#ems h3 {
+    font-size: 1.5em;
+}
+#ems p {
+    font-size: 1em;
+}
+
+#ems {
+    font-size: 15px;
+}
+
+#ems ul {
+    font-size: 1.5em;
+}
+
+button {
+    font-size: 1em;
+    padding: 0 1em;
+    border-radius: 0.5em;
+    background-color: #2a9d8f;
+    color: white;
+}
+
+
+#rems h2{
+    font-size: 3rem;
+}
+#rems h3{
+    font-size: 2rem;
+}
+#rems ul{
+    font-size: 1.5rem;
+}
+
+#rems button{
+    font-size: 1.5rem;
+}
+
+

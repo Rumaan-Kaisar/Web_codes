@@ -1,0 +1,11 @@
+
+	--------	Objectives	--------
+
+	Width & Height
+	Border
+	Border radious
+	Padding
+	Margin
+	Display Property
+	Units - Percentages, EMS, & REMS
+	cifity 
