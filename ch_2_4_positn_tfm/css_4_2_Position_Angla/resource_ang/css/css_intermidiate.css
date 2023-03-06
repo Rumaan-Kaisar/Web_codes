@@ -1,0 +1,139 @@
+body {
+    color: #40514E;
+    margin: 0;
+    text-align: center;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 50px auto 0 auto;
+    color: #66BFBF;
+}
+
+h2 {
+    font-family: "Adelle", serif;
+    font-size: 2.5rem;
+    color: #66BFBF;
+    font-weight: normal;
+}
+
+
+h3 {
+    font-family: "Adelle", serif;
+    color: #11999E;
+}
+
+.top-container { 
+    background-color:#E4F9F5;
+    position: relative;
+    padding-top: 100px;
+                }
+
+.mmiddle-container {
+
+    }
+    
+.bottom-container {
+
+    }
+
+.pro{
+    text-transform: uppercase;
+}
+
+.bottom-cloud {
+    position: absolute;
+    left: 300px;
+    bottom: 300px;
+}
+
+.top-cloud {
+    position: absolute;
+    right: 300px;
+    top: 50px;
+
+}
+
+
+
+.skill-row{
+    width: 50%;
+    margin: 100px auto 100px auto;
+}
+
+.skill-row p{
+    text-align: left;
+    line-height: 1.5;
+}
+
+.profile p{
+    width: 30%;
+    margin: 10px auto 50px auto;
+}
+
+hr {
+    border-style: none;
+    border-top: 7px dotted #cecece ;
+    width: 5%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.bottom-container {
+    height: 100px;
+    background-color: #66BFBF;
+}
+
+.bottom-container a{
+    display: inline-block;
+    margin: 30px 10px 10px 10px;
+    text-decoration: none;
+    color: #4a8d8d;
+    font-size: 1.2rem;
+}
+
+.bottom-container p{
+    color: #eaf6f6;
+}
+
+.contact-me p{
+    width: 30%;
+    margin: 10px auto;
+}
+
+.contact-me a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    background-color: #66BFBF;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    color: #eaf6f6;
+    border-radius: 8px;
+    background-image: linear-gradient(to bottom, rgb(106, 211, 211), rgb(102, 191, 191));
+    
+}
+
+.contact-me a:hover{
+    background-image: linear-gradient(to bottom, #8bf0f0, #86d8d8);
+    background-color: ;
+    color: #f1ffff;
+}
+
+/* - - - - -   images  - - - - - */
+.profile img {
+    margin-top: 50px;
+}
+
+.code-img{
+    width: 20%;
+    float: left;
+    padding-right: 20px;
+}
+
+.chilli-img {
+    width: 20%;
+    float: right;
+    padding-left: 20px;
+}

@@ -1,0 +1,11 @@
+
+	--------	Objectives	--------
+
+		Opacity & Alpha Channel
+		Position Property
+		Transforms
+		Transitions
+		Google Fonts
+		The Full Story On The Background Property
+
+

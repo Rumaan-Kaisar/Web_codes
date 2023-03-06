@@ -1,0 +1,65 @@
+/*  
+    Static is default
+
+    Relative: relative to itself, its actual position
+
+    absolute: 
+        removed frm normal document flow
+        no space is created, collapsed and stacked (z-index appear)
+        positioned relative to its closest ancestor or initial block (<body>)
+        i.e. if its parent element is positioned "relative" it positioned relative to the parent
+    
+    fixed:
+        The element is removed from the normal document flow and 
+        no space is created for the element in the page layout. 
+        It is positioned relative to the initial containing block established by the viewport
+
+    sticky: not fixed at first, then get fixed later
+        The element is positioned according to the normal flow of the document, 
+        and then offset relative to its nearest scrolling ancestor and 
+        containing block (nearest block-level ancestor),
+
+    z-index:
+        layered orter, stack on top/back of other elements
+*/
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: #3d405b;
+    border: 2px solid black;
+    margin: 10px;
+    display: inline-block;
+}
+
+
+#middle {
+    background-color: #81b29a;
+}
+
+#static #middle {
+    position: static;
+    top: 100px;
+}
+
+#relative #middle {
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+#absolute {
+    position: relative;
+}
+
+#absolute #middle {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+
+#fixed #middle {
+    position: fixed;
+    top: 0;
+    left: 400px;
+}

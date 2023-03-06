@@ -1,0 +1,47 @@
+/*  
+    Shorthand for bunch of different properties:
+        "url" can be file path or link
+        background: center/cover url("img.jpg");
+        background: center/cover url("https://images.unsplash.com/photo-1564442038901-4f9a19d3d456?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1227&q=80");
+
+        Sizing the background:
+            background-size: auto or cover or contain
+
+        Sepecify image part:
+            background-position: top;
+        
+        combining properties: order doesnot matter
+            background: no-repeat url("img.jpg");   
+                    or
+            background: url("img.jpg") no-repeat; 
+            
+            The <bg-size> value may only be included immediately after <position>, 
+            separated with the "/" character, like this: "center/80%>
+
+                background: center/cover url("img.jpg");
+                            or
+                background: url("img.jpg") center/cover;
+        
+        Multiple background
+            background: center/50% no-repeat url("img.jpg"), blue;
+        */
+
+section {
+    width: 80%;
+    height: 800px;
+    /* background-image: url("https://images.unsplash.com/photo-1564442038901-4f9a19d3d456?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1227&q=80");
+    background-size: cover;
+    background-position: top; */
+    /* background: center/cover url("img.jpg"); */
+    background: center/50% no-repeat url("img.jpg"), blue;  /* Multiple background */
+    margin: 0 auto;     /* centering the section */
+}
+
+h1 {
+    font-size: 150px;
+    text-align:center;      /* centering the text/object */
+    text-shadow: black -6px 6px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+    color:white;
+}

@@ -1,0 +1,39 @@
+/*  
+    alpha channel with RGB: Specific element impact
+        rgaba(red, green, blue, alpha)
+        rgba(0, 209, 112, 0.5)
+
+        only applied to background
+            background-color: rgba(255,255,255,0.7);     
+
+        HEX with alpha cannel: 8 digit instead of 6 
+            background-color: #00cca048;   
+        
+        only applied to the element, not its DISCENDENTS (EG: not applied to child)
+
+        
+    Opacity: everything has impact
+        Applied to a element
+        effets to its DISCENDENTS
+
+*/
+
+section {
+    width: 500px;
+    height: 500px;
+    background-color: magenta;
+}
+
+#rgba {
+    width: 50%;
+    height: 50%;
+    background-color: rgba(255,255,255,0.7);     /* only applied to background  */
+    background-color: #00cca048;    /* HEX with alpha cannel: 8 digit instead of 6 */
+}
+
+#opacity {
+    width: 50%;
+    height: 50%;
+    background-color: yellow;
+    opacity: 0.3;   /* Aplied to all nested/DISCENDENT elements including text */
+}

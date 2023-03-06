@@ -1,0 +1,35 @@
+/* 
+    copy font link from GOOGLE-font, link it in <head> of HTML 
+    
+    activate/use the font in CSS file, by including it in 'body{}'
+        body {
+        font-family: Roboto, sans-serif;
+        }
+    
+    Specify multple fonts: Montserrat & Roboto. Just concatenate in url
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@100;400&display=swap"
+            rel="stylesheet">
+*/
+
+body {
+    font-family: Montserrat, sans-serif;
+}
+
+main {
+    width: 60%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+h1 + h2 {
+    margin-top: 10px;
+}
+
+h1,h2,h3 {
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+}
