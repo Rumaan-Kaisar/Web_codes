@@ -1,0 +1,20 @@
+	--------	Objectives	--------
+
+    Used for layout
+    Adding, sharing and distributing spaces
+
+            
+        FOCUS ON CONCEPTS, NOT MEMORIZING THE PROPERTIES!
+            dont memorize, use cheatsheet & MDN
+        Flex Shorthand
+        Flex-basis, grow, and shrink
+        Align-ltems
+        Flex-wrap
+        Align-content and align-self
+        Justify-Content
+        Flex-Direction
+        
+        Media Queries (RESPONSIVE)
+	    very important for RESPONSIVE web design
+	    it determines, the look of the website in different screen-size
+            

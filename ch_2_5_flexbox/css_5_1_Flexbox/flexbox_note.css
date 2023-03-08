@@ -1,0 +1,186 @@
+/*  
+    flexbox is Recently added to CSS
+
+    WHAT IS IT?
+        Flexbox is a one-dimensional layout method for laying out items in rows or columns
+
+    WHY 'FLEX'?
+        Flexbox allows us to distribute space dynamically across elements of an unknown size, hence the term "flex”
+        we have some container and we distribute the sapce of that container
+        it is similar to Bootstrap-grid
+        It ads responsiveness to a website
+    
+
+    Different flexbox properties:
+        display: flex;
+        so it is also a display property
+
+        main axis & cross axis:
+            main = left to right
+            cross = top to bottom
+        
+        flex-direction: 
+            "row" is default
+            "row-reverse" is reversed - right to left
+            "column" is top to bottom
+            "column-reverse" is reversed - bottom to top
+
+            Note: the size (hight and width) of the elements are determined by the parent-container
+                    unless they get enough room.
+
+        Justify Contents;
+            Justify the contents across the main axis
+            justify-content: flex-start;    is default
+            justify-content: flex-end;    move the content to the end
+            justify-content: center;    center the content along the main axis
+            justify-content: space-between;    all axis distributed to the elements, not the OUTER-edges
+            justify-content: space-around;    distribute all axis space around each element, with OUTER-edges
+            justify-content: space-evenly;    distribute all axis spaceevenly to all element
+
+        flex-wrap: 
+                wrap, 
+                wrap-reverse, 
+                no-wrap
+            wrap the content inside the box depending on flex-direction
+            along with cross axis (or main axis)
+        
+        align-items: 
+            distribute along the cros-axis
+                justify-content = along main axis
+                align-items = along cross axis
+            flex-start;    to top
+            flex-end;    to bottom
+            center;    to center
+            baseline;  adds baseline to the base of the text/font
+            
+
+        align-contents: 
+            only applied when flex-wrap is used
+                stretch
+                space-between
+                space-around
+                flex-end
+                flex-start
+                centre
+        
+
+        align-self:
+            applied to single element of a flex-container
+                flex-end
+            
+            consider each div is inside the flex-container
+                div:nth-of-type(3){
+                    align-self: flex-start;
+                }
+
+        ------ making element flexible : RESPONSIVE --------
+        Flex Sizing Properties: how grow or shrink according to available space
+            FLEX-BASIS: Defines the initial size of an element before additional space is distributed.
+            width: 200px is ovewritten
+                #container div {
+                    width: 200px;
+                    height: 200px;
+                    flex-basis: 400px;
+                }
+
+            FLEX-GROW: Controls the amount of available space an element should take up.
+                Elements just take up the additional saspce available 
+                Accepts a unit-less number value.
+                1st element takes up all available sapce
+
+                    div:nth-of-type(1){
+                        flex-grow: 1;
+                    }
+                    
+                we can restrict width using 'min-width' & 'max-width'
+                
+                using different numbers: 2 means twicve of the 1st flex grow
+                    div:nth-of-type(5){
+                        flex-grow: 2;
+                    }
+
+            FLEX-SHRINK: If items are larger than the container, they shrink according to flex-shrink.
+                    2 faster
+                    0 no-shrink
+
+            flex: shorthand property
+                takes 3 values most
+                    Three values: flex-grow | flex-shrink | flex-basis
+                        flex: 2 2 10%;
+
+                    Keyword values
+                        flex: auto; 
+                        flex: initial; 
+                        flex: none;
+
+                    One value, unitless number: flex-grow  
+                        flex: 2;
+
+                    One value, width/height: flex-basis
+                        flex: 10em;
+                        flex: 30%;
+                        flex: min-content;
+
+                    Two values: flex-grow | flex-basis 
+                        flex: 1 30px;
+                        
+                    Two values (unitless): flex-grow I flex-shrink
+                        flex: 2 2;
+*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1, h2{
+    text-align: center;
+}
+
+#container {
+    background-color: #003049;
+    width: 90%;
+    /* height: 500px; */
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+}
+
+#container div {
+    width: 200px;
+    height: 200px;
+    /* max-width: 300px; */
+    text-align:center;
+    flex-basis: 600px;
+}
+
+div:nth-of-type(1) {
+    flex-grow: 1;
+    flex-shrink:2;
+}
+div:nth-of-type(5) {
+    flex-grow: 2;
+}
+
+
+/* ------ another example : shorthand ------ */
+main {
+    width: 80%;
+    margin: 0 auto;
+    border: 5px solid black;
+    height: 500px;
+    display: flex;
+}
+
+/* sizing the sections inside the 'main' (flex-container) */
+main .sidebar {
+    background-color: #6930c3;
+    flex:1 2 300px;
+}
+main .maincontent {
+    background-color: #80ffdb;
+    flex: 2 1 800px;
+}
+
+
