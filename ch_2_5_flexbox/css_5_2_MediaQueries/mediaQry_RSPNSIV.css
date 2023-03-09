@@ -1,0 +1,154 @@
+/* 
+    Most of the RESPONSIVness is achived by MEDIA-QUERIES
+        It styles the web-page acoording to the display size (width of the browser)
+
+        @media (max-width: 800px){}         is used for 800px display size
+        @media (min-width: 30em) and (orientation: landscape){}             is used for 30em display size
+
+        stripe.com for different size preview
+
+    GENERAL form:
+        @media (media-features such as "width" "hight" or "inverted-colors" or 'light-level')
+        mostly "width" is used
+
+            @media (width: 360px) { 
+                div {
+                    color: red;
+                }
+            }
+        
+    viewport:
+        A viewport represents a polygonal (normally rectangular) area in computer graphics that is currently being viewed. 
+        In web browser terms, it refers to the part of the document you’re viewing which is currently 
+            visible in its window (or the screen, if the document is being viewed in full screen mode). 
+        Content outside the viewport is not visible onscreen until scrolled into view.
+
+    @media (width: 800px): changes color at exact 800pt screen
+    better option is:   
+        @media (min-width: 800px):  applied to screen greater than 800px
+        @media (max-width: 800px):  applied to screen less than 800px
+        @media (min-width: 800px) and (max-width: 1000px): applied to screen between 800px and 1000px
+
+    combine media queries using "and"
+        @media (min-width: 800px) and (max-width: 1000px)
+        
+    Cascading Order matters in medias queries: BIG first
+            i.e. Bigger screen-size comes first
+
+            @media (min-width: 800px) and (max-width: 1000px) { }
+            @media (min-width: 700px) and (max-width: 799px) { }
+            @media (min-width: 400px) and (max-width: 699px) { }
+    
+    orientation media query:
+            @media (orientation: landscape) { }
+
+
+    Use some standared break points
+        // Small devices (landscape phones, 576px and up) 
+            @media (min-wldth: 576px) {	... }
+        // Medium devices (tablets, 768px and up)
+            @media (min-width: 768px) { ... }
+        // Large devices (desktops, 992px and up)
+            @media (min-width: 992px) { ... }
+        // Extra large devices (large desktops, 1200px and up) 
+            @media (min-width: 1200px) { ... }
+
+*/
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 6em;
+    text-align: center;
+}
+nav {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+ul,li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* @media (min-width: 600px) and (max-width: 800px){
+    h1 {
+        color: purple;
+    }
+} */
+
+
+/* @media (max-width: 1500px){
+    h1 {
+        color: yellow;
+    }
+}
+
+@media (max-width: 1000px){
+    h1 {
+        color: orange;
+    }
+}
+@media (max-width: 500px){
+    h1 {
+        color: red;
+    }
+} */
+
+
+
+h1 {
+    color: red;
+}
+
+@media (min-width: 500px){
+    h1 {
+        color: orange;
+    }
+}
+@media (min-width: 1000px){
+    h1 {
+        color: yellow;
+    }
+}
+@media (min-width: 1500px){
+    h1 {
+        color: green;
+    }
+}
+
+/* @media (orientation: landscape) {
+ body {
+     background-color: magenta;
+ }
+} */
+
+
+@media (max-width: 768px){
+    h1 {
+        font-size: 4em;
+    }
+    nav, nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+}
+@media (max-width: 576px){
+    h1 {
+        font-size: 3em;
+    }
+}
