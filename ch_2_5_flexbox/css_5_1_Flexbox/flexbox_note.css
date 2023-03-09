@@ -93,6 +93,10 @@
                     }
                     
                 we can restrict width using 'min-width' & 'max-width'
+                    div:nth-of-type(1){
+                        flex-grow: 1;
+                        max-width: 50%;
+                    }
                 
                 using different numbers: 2 means twicve of the 1st flex grow
                     div:nth-of-type(5){
