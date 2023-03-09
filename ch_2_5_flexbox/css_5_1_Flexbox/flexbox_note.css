@@ -131,7 +131,7 @@
                     Two values (unitless): flex-grow I flex-shrink
                         flex: 2 2;
 
-        Nested flex-box
+        --------    Nested flex-box     --------
             // Use flexbox to style the nav bar
             nav {
                 font-size: 1.5em;
