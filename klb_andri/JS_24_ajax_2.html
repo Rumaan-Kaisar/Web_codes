@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Navigator</title>
+        <link>
+        <script src="JS_file_URL_Link" type="text/javascript"></script>
+        <script>
+            // we can put most of this into a function and return the new XMLHttpRequest.
+            function newAjax(){
+                var ajax;
+                if(window.XMLHttpRequest) {
+                    // this is for IE 7+, Chrome, Safari and Firefox. 
+                    ajax = new XMLHttpRequest();
+                } else {
+                    // this is for IE 6 and IE 5.
+                    ajax = new ActiveXObject("Microsoft.XMLHTTP"); I
+                }
+                return ajax; 
+            }
+            // We  use this with another function
+            function LoadMe() {
+                var ajaxHandler = newAjax(); 
+                ajaxHandler.onreadystatechange = function(){
+                    if (ajaxHandler.readyState==4 && ajaxHandler.status==200) {
+                        document.getElementById("loadMe").innerHTML = ajaxHandler.responseText;
+                    }
+                }
+                ajaxHandler.open("GET", "mypage.html", true); 
+                ajaxHandler.send()
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div id="loadMe">&nbsp;</div>
+        <button onclick="LoadMe()">Ajax My page</button>
+    </body>
+    
+</html>
