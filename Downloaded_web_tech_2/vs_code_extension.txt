@@ -1,0 +1,17 @@
+VS-code extension by colt steele.
+
+0:00:34 - Emmet
+0:02:27 - Material Theme
+0:04:15 - Live Server
+0:05:59 - CSS Peek
+0:07:57 - Color Highlight
+0:09:57 - Bracket Pair Colorizer
+0:13:41 - ES7/React Snippets
+0:16:18 - Prettier Now
+
+
+
+Brackets Extension
+Lorem Ipsum
+Beautify
+Autosave
