@@ -1,0 +1,43 @@
+	--------	Objectives	--------
+
+    Used for layout and Quick Styling
+    Grids, Layout
+            
+        Bootstrap helps us quickly build responsive websites.
+
+        Components
+            Bootstrap gives us access to a bunch of pre-built components
+            that we can incorporate into our own websites
+
+        Grid System
+            Bootstrap also comes with a grid system, 
+            which helps us construct our own custom, responsive layouts
+
+
+
+    -----    Topics    -----
+
+        WTF Is Bootstrap	
+        Working With CSS Frameworks	
+        Including 3rd Party CSS & CDNS	
+
+        Bootstrap Grid
+        Responsive Bootstrap Grid
+        Bootstrap Navbars
+
+        Icons
+        Typography and Utilities
+        Bootstrap Forms
+        Bootstrap Buttons
+
+
+
+
+    Other CSS frameworks:
+
+        1.  Bootstrap (most popular and biggest community)
+        2.  Tailwind  (highly customizable, lightweight)
+        3.  Foundation
+        4.  Semantic UI
+        5.  Bulma
+        6.  Skeleton (400 lines of code)
