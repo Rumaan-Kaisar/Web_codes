@@ -1,0 +1,49 @@
+/* selector {
+    Property: value;
+    } */
+    
+body{
+    background-image: url(backgroundimage.jpg); 
+    background-size: cover;
+}
+
+h2{
+    color: #AA4139; text-align: center;
+    border: 5 solid rgba(255, 176, 170, 0.5); 
+    cursor: pointer;
+}
+    
+p{
+    color: pink;
+}
+
+P{
+    color: green;
+}
+
+li{
+    list-style: none; 
+    display: inline-block;
+}
+
+
+
+/* Text properties */
+div{
+    text-decoration: line-through;
+    text-transform: lowercase;
+    line-height: 4px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+        /* Text decoration: underline, line-through
+        Text-transform: Upeercase/lowercase
+        Line-height 
+        Font-style: italic
+        Font-weight
+        Font-size
+        Font-family */
+}
+
+
