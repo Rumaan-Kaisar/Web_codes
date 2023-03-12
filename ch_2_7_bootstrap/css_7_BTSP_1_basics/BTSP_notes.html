@@ -1,0 +1,160 @@
+<!-- 
+
+    For snippet use: Bootstrap v4 Snippets, a vs-code addon
+
+    Using CDNS is faster
+    Can also use downloded Bootstrap files: 
+        For big app productiion downloading is best option, because CDN might be down of link can change
+
+    Order of Inclusion of files matters
+        bootstrap.min.css   always in <head>
+            Place this before your own stylesheet CSS so that you can overrite any BOOTSTRAP property
+            And none of your styles get overriten by BOOTSTRAP
+        
+        following 3-files must included at the bottom of the <body>
+        (JS is not needed if you dont use any effects: such as 'collapsable nav')
+
+            jquery-3.5.1.slim.min.js
+            popper.min.js
+            bootstrap.min.js
+
+                Components requiring JavaScript
+                    •	Alerts for dismissing
+                    •	Buttons for toggling 
+                    •	Carousel for all slide behaviors, controls, and indicators
+                    •	Collapse for toggling
+                    •	Dropdowns 
+                    •	scroll behavior
+                    •	Navbar Collapse: responsiveness
+                    •	Tooltips and popovers
+
+
+    Basic layot element
+            container: required to apply gridsystem. Responsive fixed width container.
+                contain
+                pad
+                center
+                for most layout no nesting needed
+            
+            container-fluid: Takes larger width, minimum margin
+
+            Responsive containers
+            container-sm, container-md, container-lg, container-xl,
+                100% wide untill small/medium/large/extraLarge break point
+                i.e. larger than medium-break-point 'container-md' acts like normal 'container'
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Basics</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Using local bootstrap -->
+    <link rel="stylesheet" href="../BS_dist_min/bootstrap.min.css"/>
+
+    <!-- our stylesheet -->
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="display-1 text-center text-primary">Bootstrap Playground</h1>
+        <h2 class="display-4">Buttons <span class="badge badge-success badge-pill">New</span></h2>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button class="btn btn-outline-warning">Warning Outline</button>
+        <button class="btn btn-outline-danger">Danger Outline</button>
+        <button class="btn btn-outline-info btn-lg">Info Outline</button>
+        <button class="btn btn-secondary btn-sm">SM Button</button>
+        <button type="button" class="btn btn-success" disabled>Success Disabled</button>
+        <button class="btn btn-primary">Updates <span class="badge badge-light">9</span></button>
+        <h3>Button Groups</h3>
+        <div class="btn-group">
+            <button class="btn btn-warning">One</button>
+            <button class="btn btn-warning">Two</button>
+            <button class="btn btn-warning">Three</button>
+        </div>
+        <h3>Alerts</h3>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <h4 class="alert-heading">Oh No!</h4>
+            Danger! You are about to end the world as we know it!
+            <button aria-label="Close" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <h2 class="display-4">Typography</h2>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eaque, in autem cupiditate quasi
+            neque hic
+            minus
+            harum perferendis repellendus eos suscipit? Sunt laborum deserunt ea autem totam illum modi!Nobis expedita,
+            inventore provident reiciendis nostrum impedit, sunt magnam, labore ipsum sequi incidunt! Corrupti esse
+            harum
+            nesciunt soluta placeat, voluptates illo accusantium quam fuga ducimus quaerat minus laudantium, quo odit!
+        </p>
+        <blockquote class="blockquote text-right">
+            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ab sed iusto alias numquam
+                ipsum tenetur
+                error nostrum similique sunt, quod deserunt totam pariatur consequatur ad exercitationem et ea odio?</p>
+            <footer class="blockquote-footer">Mr. Lorem Ipsum</footer>
+        </blockquote>
+
+    </div>
+
+    <div class="container">
+        Grid is applied now<br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt necessitatibus, voluptates doloribus, corrupti eius, rerum incidunt pariatur illo magnam rem alias? Iusto nobis recusandae dolorum voluptatem quidem, praesentium mollitia quos rem aliquam excepturi molestiae dicta obcaecati eligendi maxime! Voluptates illum quia, libero porro dolor dolorum perferendis itaque, ipsa perspiciatis repudiandae quisquam assumenda officia! Ea rerum ut ab quibusdam accusantium et provident dolore laboriosam! Eveniet magnam sequi voluptatem in labore quisquam facere adipisci distinctio facilis architecto, quae dolorum eaque aut minus? Distinctio saepe harum ut doloribus tempora? Quo quod, quibusdam nihil harum, odit itaque nobis corporis, blanditiis incidunt veritatis molestias natus.
+    </div>
+
+    <div class="container-md">
+        Grid is applied now<br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt necessitatibus, voluptates doloribus, corrupti eius, rerum incidunt pariatur illo magnam rem alias? Iusto nobis recusandae dolorum voluptatem quidem, praesentium mollitia quos rem aliquam excepturi molestiae dicta obcaecati eligendi maxime! Voluptates illum quia, libero porro dolor dolorum perferendis itaque, ipsa perspiciatis repudiandae quisquam assumenda officia! Ea rerum ut ab quibusdam accusantium et provident dolore laboriosam! Eveniet magnam sequi voluptatem in labore quisquam facere adipisci distinctio facilis architecto, quae dolorum eaque aut minus? Distinctio saepe harum ut doloribus tempora? Quo quod, quibusdam nihil harum, odit itaque nobis corporis, blanditiis incidunt veritatis molestias natus.
+    </div>
+
+    <!-- following uses local files -->
+    <!-- JavaScript files incusion in order -->
+
+    <!-- Include "Jquery" JS. Adds interactivity in Bootstrap.
+        It is a JS librarry.
+        It's a library of JavaScript functions that make it easy for webpage developers to do common tasks-- like 
+        - manipulating the webpage, 
+        - responding to user events, 
+        - getting data from their servers, 
+        - building effects and animations, and much more. -->
+
+    <script src="../BS_dist_min/jquery-3.5.1.min.js"></script>
+
+
+    <!-- Include "Popper" JS 
+        Popper. js is a library to help you position tooltips, popovers, dropdowns and 
+        any contextual element that should appear near a button or similar (I call them "poppers"). 
+        In short, it's a piece of code that saves you hours of work on any of your projects, 
+        since almost all of them end up featuring some "popper".-->
+
+    <script src="../BS_dist_min/popper.min.js"></script>
+
+
+    <!--    Include "Bootstap" JS.
+            Bootstrap provides custom events for most plugins' unique actions. -->
+    <script src="../BS_dist_min/bootstrap.min.js"></script>
+
+
+
+    <!-- following uses CDNS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
