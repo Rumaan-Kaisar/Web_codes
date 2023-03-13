@@ -42,6 +42,51 @@
             container-sm, container-md, container-lg, container-xl,
                 100% wide untill small/medium/large/extraLarge break point
                 i.e. larger than medium-break-point 'container-md' acts like normal 'container'
+        
+        
+        Buttons: 
+            btn
+            not have to be buttons, can be links or inputs
+        
+            sizing: use "lg"=large or "sm"=small
+                btn-lg 
+
+            Block:
+                btn-block
+            
+            active/disabled:
+                active
+                disabled
+
+        Note :
+            primary, seciondary, success all are used with class names.
+            These are for semantic meaning
+
+
+    Typography :
+        dispaly-1,2,3,4 : for large headers
+        lead: little bigger 1.25rem
+        blockquote: bold for quotes
+            blockquote-footer
+        aligning: 
+            text-centre
+            text-right
+
+    Utilities: quickly change color, center etc
+        margin:
+            mb-0    : margin-bottom 0
+        background color: bg-light
+
+
+    Badge alert buttongroups:
+        badge is used in notification count in buttons
+        button group: group multple buttons: balse bunch of buttons inside a <div class="btn-group">
+                role
+                different sizes
+        alert: to alert somthing
+            alert alert-success
+            dismissing alert
+        
  -->
 
 <!DOCTYPE html>
@@ -107,12 +152,35 @@
     </div>
 
     <div class="container">
-        Grid is applied now<br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt necessitatibus, voluptates doloribus, corrupti eius, rerum incidunt pariatur illo magnam rem alias? Iusto nobis recusandae dolorum voluptatem quidem, praesentium mollitia quos rem aliquam excepturi molestiae dicta obcaecati eligendi maxime! Voluptates illum quia, libero porro dolor dolorum perferendis itaque, ipsa perspiciatis repudiandae quisquam assumenda officia! Ea rerum ut ab quibusdam accusantium et provident dolore laboriosam! Eveniet magnam sequi voluptatem in labore quisquam facere adipisci distinctio facilis architecto, quae dolorum eaque aut minus? Distinctio saepe harum ut doloribus tempora? Quo quod, quibusdam nihil harum, odit itaque nobis corporis, blanditiis incidunt veritatis molestias natus.
+        <h1 class="display-1">Grid is applied <span class="badge badge-primary">now</span></h1>
+        <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt necessitatibus, voluptates doloribus, corrupti eius, rerum incidunt pariatur illo magnam rem alias? Iusto nobis recusandae dolorum voluptatem quidem, praesentium mollitia quos rem aliquam excepturi molestiae dicta obcaecati eligendi maxime! Voluptates illum quia, libero porro dolor dolorum perferendis itaque, ipsa perspiciatis repudiandae quisquam assumenda officia! Ea rerum ut ab quibusdam accusantium et provident dolore laboriosam! Eveniet magnam sequi voluptatem in labore quisquam facere adipisci distinctio facilis architecto, quae dolorum eaque aut minus? Distinctio saepe harum ut doloribus tempora? Quo quod, quibusdam nihil harum, odit itaque nobis corporis, blanditiis incidunt veritatis molestias natus.
+            <blockquote class="blockquote text-right bg-light">Lorem ipsum dolor sit amet consectetur adipisicing elit.</blockquote>
+            <blockquote class="blockquote-footer text-right text-primary">Mr. Adipisicing elit.</blockquote>
+        </p>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
     </div>
 
     <div class="container-md">
+        <button type="button" class="btn btn-primary">Primary <span class="badge badge-light">9</span></button>
+        <button type="button" class="btn btn-success">success</button>
+        <button type="button" class="btn btn-info">info <span class="badge-pill badge-light">9</span></button>
+        <a class="btn btn-primary" href="#" role="button">Link</a>
+        <input class="btn btn-dark btn-sm" type="submit" value="Submit">
+        <button class="btn btn-outline-warning btn-lg">Worning Outline</button>
+        <button class="btn btn-outline-warning btn-lg btn-block">Worning Outline</button>
+        <div class="btn-group">
+            <button class="btn btn-warning">nice</button>
+            <button class="btn btn-warning">btn</button>
+            <button class="btn btn-warning">group</button>
+        </div>
         Grid is applied now<br>
+        <div class="alert alert-success">
+            done succesfully
+        </div>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt necessitatibus, voluptates doloribus, corrupti eius, rerum incidunt pariatur illo magnam rem alias? Iusto nobis recusandae dolorum voluptatem quidem, praesentium mollitia quos rem aliquam excepturi molestiae dicta obcaecati eligendi maxime! Voluptates illum quia, libero porro dolor dolorum perferendis itaque, ipsa perspiciatis repudiandae quisquam assumenda officia! Ea rerum ut ab quibusdam accusantium et provident dolore laboriosam! Eveniet magnam sequi voluptatem in labore quisquam facere adipisci distinctio facilis architecto, quae dolorum eaque aut minus? Distinctio saepe harum ut doloribus tempora? Quo quod, quibusdam nihil harum, odit itaque nobis corporis, blanditiis incidunt veritatis molestias natus.
     </div>
 
