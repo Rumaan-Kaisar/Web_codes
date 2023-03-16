@@ -35,9 +35,9 @@
 
     Other CSS frameworks:
 
-        1.  Bootstrap (most popular and biggest community)
+        1.  Bootstrap (most popular and biggest community) - c
         2.  Tailwind  (highly customizable, lightweight)
-        3.  Foundation
-        4.  Semantic UI
-        5.  Bulma
+        3.  Foundation - c
+        4.  Semantic UI - c
+        5.  Bulma - c
         6.  Skeleton (400 lines of code)
