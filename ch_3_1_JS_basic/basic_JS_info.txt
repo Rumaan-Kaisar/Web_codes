@@ -1,0 +1,8 @@
+
+    JavaScript Basics
+    Understanding the role of JavaScript
+    JavaScript Numbers
+    Variables & Let
+    Const
+    Booleans
+    Variable Naming
